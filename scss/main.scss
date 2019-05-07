@@ -1,0 +1,116 @@
+@import 'config';
+@font-face {
+    font-family: 'frank_ruhl_hofshiregular';
+    src: url('fonts/frankruhlhofshi-regular-webfont.woff2') format('woff2'),
+         url('fonts/frankruhlhofshi-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    font-family: 'frank_ruhl_hofshiregular', Tahoma, Verdana, sans-serif;
+    font-size: 15px;
+    background-color: $pri-color;
+    margin: 0;
+    min-height: calc(100vh - 110px);
+}
+
+header {
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 0px;
+    width: 100%;
+    height: 100px;
+    border-bottom: $sec-color 5px solid;
+}
+
+.branding {
+    float: left;
+    margin-left: 20px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+}
+.text-sec {
+    color: $sec-color;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    display: inline;
+    padding: 0 20px 0 20px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+
+        &:hover {
+            font-size: 22px;
+            color: $sec-color;
+            @include easeOut;
+        }
+    }
+}
+
+.menu-item.current {
+    a {
+        text-decoration: underline;
+    }
+}
+
+nav {
+    float: right;
+    margin-top: 26px;
+    margin-right: 130px;
+}
+
+.sidebar {
+    margin: 20px 20px 0 20px;
+    padding: 20px;
+    width: 25%;
+    float: right;
+    overflow: hidden;
+    border: $sec-color 5px solid;
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.showcase {
+    padding: 20px 0 20px 20px;
+    margin: 0;
+    width: 75%;
+    border: 0;
+
+    .showcase-content{
+        
+        .sm-heading {
+            font-size: 2rem;
+            margin: 10px 0 10px 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            margin: 0 0 0 0;
+            width: 400px;
+            padding-right: 100px;
+            overflow: hidden;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    background: #3a3a3a;
+    color: #fff;
+    margin: 20px 0 0 0;
+    padding-top: 10px;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+}
